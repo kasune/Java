@@ -1,0 +1,10 @@
+2013-11-28 15:32:11.735 DEBUG Starter - main ------------- starting ftp connector -------------
+2013-11-28 15:32:11.739 DEBUG Configurator - main configurations initialized 
+2013-11-28 15:32:11.742 DEBUG Configurator - main matching date type -20131127
+2013-11-28 15:32:11.743 DEBUG Configurator - main configurations initialized 
+2013-11-28 15:32:11.745 DEBUG FTPCon - main ftp connection object initialized 
+2013-11-28 15:32:11.745 DEBUG FTPCon - main local folder empty disable
+2013-11-28 15:32:32.770 DEBUG Starter - main java.net.ConnectException: Connection timed out: connect
+2013-11-28 15:32:32.771 DEBUG Starter - main sleeping for 2 sec
+2013-11-28 15:32:34.771 DEBUG FTPCon - main ftp connection object initialized 
+2013-11-28 15:32:34.771 DEBUG FTPCon - main local folder empty disable

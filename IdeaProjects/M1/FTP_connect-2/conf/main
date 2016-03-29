@@ -1,0 +1,9 @@
+FTPServer.host=10.82.105.16
+FTPUser=ftpuser
+FTPPassword=1234
+RemoteDirectory=kasun
+LocalDirectory=D:\\tmp\\tmp\\
+FileNameMatch=true
+DaysBack=1
+RemoteFileDelete=true
+LocalFileDelete=true

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="module_kasun_property1" default="compile.module.kasun_property1">
+  <dirname property="module.kasun_property1.basedir" file="${ant.file.module_kasun_property1}"/>
+  
+  <property name="module.jdk.home.kasun_property1" value="${project.jdk.home}"/>
+  <property name="module.jdk.classpath.kasun_property1" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.kasun_property1" value="${compiler.args}"/>
+  
+  <property name="kasun_property1.output.dir" value="${module.kasun_property1.basedir}/classes"/>
+  <property name="kasun_property1.testoutput.dir" value="${module.kasun_property1.basedir}/classes"/>
+  
+  <path id="kasun_property1.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="kasun_property1.module.classpath">
+    <path refid="${module.jdk.classpath.kasun_property1}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.kasun_property1">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.kasun_property1">
+    <patternset refid="excluded.from.module.kasun_property1"/>
+  </patternset>
+  
+  <path id="kasun_property1.module.sourcepath">
+    <dirset dir="${module.kasun_property1.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.kasun_property1" depends="compile.module.kasun_property1.production,compile.module.kasun_property1.tests" description="compile module(s) kasun_property1"/>
+  
+  <target name="compile.module.kasun_property1.production" description="compile module(s) kasun_property1 production classes">
+    <mkdir dir="${kasun_property1.output.dir}"/>
+    <javac2 destdir="${kasun_property1.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memoryMaximumSize="${compiler.max.memory}" fork="true" executable="${module.jdk.home.kasun_property1}/bin/javac">
+      <compilerarg line="${compiler.args.kasun_property1}"/>
+      <bootclasspath refid="kasun_property1.module.bootclasspath"/>
+      <classpath refid="kasun_property1.module.classpath"/>
+      <src refid="kasun_property1.module.sourcepath"/>
+    </javac2>
+    <copy todir="${kasun_property1.output.dir}">
+      <fileset dir="${module.kasun_property1.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.kasun_property1.tests" depends="compile.module.kasun_property1.production" description="compile module(s) kasun_property1 test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.kasun_property1" description="cleanup module">
+    <delete dir="${kasun_property1.output.dir}"/>
+    <delete dir="${kasun_property1.testoutput.dir}"/>
+  </target>
+</project>

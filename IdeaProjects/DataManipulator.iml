@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4" relativePaths="true" type="JAVA_MODULE">
+  <component name="ModuleRootManager" />
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/AgoraConnect/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Bru/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Bru2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CLI-swiftmq7/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Health-checker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/jcl-over-slf4j/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/jcl-over-slf4j/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/jul-to-slf4j/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/jul-to-slf4j/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/log4j-over-slf4j/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-api/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-api/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-jcl/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-jcl/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-jdk14/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-jdk14/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-log4j12/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-log4j12/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-migrator/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-migrator/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-nop/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-nop/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-simple/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/slf4j-1.5.2/slf4j-simple/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Hiber/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/INtester/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MMP-Check/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Mailsender/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Uni_Web/src" isTestSource="false" packagePrefix="ocs" />
+      <sourceFolder url="file://$MODULE_DIR$/agora-reconnect_new" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java W" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kasun_property1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mmp1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/smpp" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntryProperties />
+  </component>
+</module>
+

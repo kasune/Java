@@ -1,0 +1,6 @@
+2013-11-22 14:34:44.963 DEBUG FTPCon - Starting ftp connector
+2013-11-22 14:34:44.997 DEBUG FTPCon - class initialized parameters loaded
+2013-11-22 14:34:44.997 DEBUG FTPCon - Matching date type -20131114
+2013-11-22 14:34:44.998 DEBUG FTPCon - local file delete disable
+2013-11-22 14:35:06.196 DEBUG FTPCon - Connection timed out: connect
+2013-11-22 14:35:06.196 ERROR FTPCon - java.net.ConnectException: Connection timed out: connect

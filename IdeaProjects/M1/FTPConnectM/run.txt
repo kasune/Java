@@ -1,0 +1,10 @@
+Windows
+
+java -cp "lib\log4j-api-2.0-beta9.jar;lib\log4j-core-2.0-beta9.jar;lib\commons-net-3.3.jar;lib\Rconnect-3.0-SNAPSHOT.jar" Starter
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIX
+
+java -cp "lib\log4j-api-2.0-beta9.jar:lib\log4j-core-2.0-beta9.jar:lib\commons-net-3.3.jar:lib\Rconnect-3.0-SNAPSHOT.jar" Starter
+

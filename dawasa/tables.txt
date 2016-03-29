@@ -1,0 +1,21 @@
+
+create table subscribers (msisdn varchar(200) not null primary key, inserttime datetime not null ,astro_sign varchar(100), extra varchar(100));
+
+create table monday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+
+create table tuesday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+create table wednesday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+create table thursday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+create table friday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+create table saturday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+create table sunday_alert (id  int not null primary key, message varchar(160) not null, status varchar(10) not null);
+
+
+-----------------------------------------
+
+daily table status maintainance
+
+pending - working - completed, completed_with_errors
+
+
+

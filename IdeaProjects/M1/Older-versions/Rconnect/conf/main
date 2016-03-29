@@ -1,0 +1,34 @@
+# ftp credentials
+FTPServer.host=192.168.56.101
+FTPServer.port=21
+FTPUser=ftpuser1
+FTPPassword=1234
+
+#ftp local and remote directories
+RemoteDirectory=kasun
+LocalDirectory=D:\\tmp\\tmp\\
+
+#file name match check(yyyymmdd pattern is exist somewhere in file name)
+FileNameMatch=true
+
+#if FileNameMatch is true search day how many days from current day
+DaysBack=8
+
+#delete remote file after download
+RemoteFileDelete=false
+
+#empty local folder before download
+LocalFolderEmpty=false
+
+#in case if the local directory has the same file
+
+#new file will be rename with the prefix
+#and the renaming prefix
+LocalFileRename=false
+#if need yyyyMMddHHmm can be specified so the filename look like 201311221603-filename
+LocalFilePreFix=new-
+
+#in case if new file also inside local directory it will be replace/skip
+OverwriteFileEnable=false
+
+

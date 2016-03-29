@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!--
+       Read http://logging.apache.org/log4j/docs/api/org/apache/log4j/DailyRollingFileAppender.html
+       for more information on DaliyRollingFileAppender configuration options.
+    -->
+    <appender name="error" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../log/sdp-dataloader_error.log"/>
+        <param name="Threshold" value="error"/>
+        <!-- uncomment this line for hourly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>-->
+        <!-- uncomment this line for daily logs-->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <!-- uncomment this line for weekly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-ww"/>-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{DATE} %-5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="trace" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../log/sdp-dataloader_trace.log"/>
+        <param name="Threshold" value="debug"/>
+        <!-- uncomment this line for hourly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>-->
+        <!-- uncomment this line for daily logs-->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <!-- uncomment this line for weekly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-ww"/>-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{DATE} %-5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="email" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../log/sdp-dataloader_email.log"/>
+        <param name="Threshold" value="info"/>
+        <!-- uncomment this line for hourly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>-->
+        <!-- uncomment this line for daily logs-->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <!-- uncomment this line for weekly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-ww"/>-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{DATE} %-5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="notification" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="../log/sdp-dataloader_notification.log"/>
+        <param name="Threshold" value="info"/>
+        <!-- uncomment this line for hourly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>-->
+        <!-- uncomment this line for daily logs-->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <!-- uncomment this line for weekly logs-->
+        <!--<param name="DatePattern" value="'.'yyyy-ww"/>-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{DATE}  %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="snmpTrap"
+              class="hsenidmobile.sdp.reporting.dataloader.SnmpLogger">
+        <param name="snmpTrapFileName"
+               value="@snmp.trap@"/>
+    </appender>
+
+    <category name="error" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="error"/>
+    </category>
+
+    <category name="trace" additivity="false">
+        <priority value="debug"/>
+    </category>
+
+    <category name="hsenidmobile" additivity="false">
+        <priority value="debug"/>
+        <appender-ref ref="trace"/>
+        <appender-ref ref="error"/>
+    </category>
+
+    <category name="hsenidmobile.sdp.reporting.dataloader.service.impl.EmailNotificationServiceImpl" additivity="false">
+        <priority value="info"/>
+        <appender-ref ref="email"/>
+    </category>
+
+    <category name="org.hibernate" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="trace"/>
+    </category>
+
+    <category name="org.apache.commons" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="trace"/>
+    </category>
+
+    <category name="com.mchange" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="trace"/>
+    </category>
+
+    <category name="org.apache.jasper" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="trace"/>
+    </category>
+
+    <category name="org.springframework" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="trace"/>
+    </category>
+
+    <category name="snmp.trap">
+        <priority value="info"/>
+        <appender-ref ref="notification"/>
+        <appender-ref ref="snmpTrap"/>
+    </category>
+
+    <root>
+        <appender-ref ref="trace"/>
+    </root>
+</log4j:configuration>

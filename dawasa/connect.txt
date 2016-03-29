@@ -1,0 +1,43 @@
+
+SSH user details:
+
+
+User: kasune
+Password : N$uEkA
+
+home directory : /home/kasune
+
+Apache tomcat location : //opt/shared
+Host : apps.appzone.lk
+
+SSH help tips : http://compudoc.princeton.edu/compudocwiki/index.php/HowTos:Connect_to_login_servers_via_ssh
+
+MySQL database user details:
+
+
+Database :  astro
+Host : localhost
+User : kasune
+Password : N$uEkA
+
+
+MySQL Help : http://dev.mysql.com/doc/mysql/en/
+
+
+Aventura Details.
+
+
+App Name : astrolgy 
+App ID : PD_ET_a0174
+Password : f917877855ae5d67cd20e519335a21af
+
+
+
+URL : http://204.236.220.126:65182/services/
+
+keyword : dawasa
+
+
+
+
+Your Port Range between 9848 to 9851

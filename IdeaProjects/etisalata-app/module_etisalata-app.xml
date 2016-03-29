@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_etisalata-app" default="compile.module.etisalata-app">
+  <dirname property="module.etisalata-app.basedir" file="${ant.file.module_etisalata-app}"/>
+  
+  <property name="module.jdk.home.etisalata-app" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.etisalata-app" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.etisalata-app" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.etisalata-app" value="${compiler.args}"/>
+  
+  <property name="etisalata-app.output.dir" value="${module.etisalata-app.basedir}/out/production/etisalata-app"/>
+  <property name="etisalata-app.testoutput.dir" value="${module.etisalata-app.basedir}/out/test/etisalata-app"/>
+  
+  <path id="etisalata-app.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="etisalata-app.module.classpath">
+    <path refid="${module.jdk.classpath.etisalata-app}"/>
+    <pathelement location="${idea.home}/lib/javaee.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/servlet-api-2.4.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-logging-1.0.4.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-httpclient-3.1.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/one-api-client-util-1.0.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/log4j-1.2.14.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/rest-sample-smsmt-application-1.0.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-codec-1.2.jar"/>
+  </path>
+  
+  <path id="etisalata-app.runtime.module.classpath">
+    <pathelement location="${etisalata-app.output.dir}"/>
+    <pathelement location="${etisalata-app.testoutput.dir}"/>
+    <pathelement location="${idea.home}/lib/javaee.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/servlet-api-2.4.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-logging-1.0.4.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-httpclient-3.1.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/one-api-client-util-1.0.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/log4j-1.2.14.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/rest-sample-smsmt-application-1.0.jar"/>
+    <pathelement location="F:/study/java/sms-java-api-client-util-LATEST/1.0/lib/commons-codec-1.2.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.etisalata-app">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.etisalata-app">
+    <patternset refid="excluded.from.module.etisalata-app"/>
+  </patternset>
+  
+  <path id="etisalata-app.module.sourcepath">
+    <dirset dir="${module.etisalata-app.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.etisalata-app" depends="compile.module.etisalata-app.production,compile.module.etisalata-app.tests" description="Compile module etisalata-app"/>
+  
+  <target name="compile.module.etisalata-app.production" description="Compile module etisalata-app; production classes">
+    <mkdir dir="${etisalata-app.output.dir}"/>
+    <javac2 destdir="${etisalata-app.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.etisalata-app}/javac">
+      <compilerarg line="${compiler.args.etisalata-app}"/>
+      <bootclasspath refid="etisalata-app.module.bootclasspath"/>
+      <classpath refid="etisalata-app.module.classpath"/>
+      <src refid="etisalata-app.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.etisalata-app"/>
+    </javac2>
+    
+    <copy todir="${etisalata-app.output.dir}">
+      <fileset dir="${module.etisalata-app.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.etisalata-app.tests" depends="compile.module.etisalata-app.production" description="compile module etisalata-app; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.etisalata-app" description="cleanup module">
+    <delete dir="${etisalata-app.output.dir}"/>
+    <delete dir="${etisalata-app.testoutput.dir}"/>
+  </target>
+  
+  <property name="etisalata-appweb.dir.exploded" value="${module.etisalata-app.basedir}/out/exploded/etisalata-appWeb"/>
+  <target name="j2ee.build.etisalata-appweb" depends="compile.module.etisalata-app" description="Build configured Java EE directories and archives for facet &apos;Web&apos;">
+    <antcall target="j2ee.build.exploded.etisalata-appweb">
+      <param name="j2ee.dir.exploded" value="${etisalata-appweb.dir.exploded}"/>
+    </antcall>
+  </target>
+  
+  <!-- Call the target to build exploded directory for facet 'Web'.
+       Path to the exploded directory is specified by parameter 'j2ee.dir.exploded' -->
+  <target name="j2ee.build.exploded.etisalata-appweb" description="Build exploded directory for facet &apos;Web&apos;">
+    <copy file="${module.etisalata-app.basedir}/web/WEB-INF/web.xml" tofile="${j2ee.dir.exploded}/WEB-INF/web.xml"/>
+    <copy todir="${j2ee.dir.exploded}/WEB-INF/classes">
+      <fileset dir="${module.etisalata-app.basedir}/out/production/etisalata-app"/>
+    </copy>
+    <copy todir="${j2ee.dir.exploded}/">
+      <fileset dir="${module.etisalata-app.basedir}/web"/>
+    </copy>
+  </target>
+  
+  <!-- Call the target to build war archive for facet 'Web'.
+       Path to the archive file is specified by parameter 'j2ee.path.jar' -->
+  <target name="j2ee.build.jar.etisalata-appweb" description="Build Java EE archive for facet &apos;Web&apos;">
+    <dirname property="jar.dir" file="${j2ee.path.jar}"/>
+    <mkdir dir="${jar.dir}"/>
+    <jar destfile="${j2ee.path.jar}" duplicate="preserve">
+      <manifest>
+        <attribute name="Created-By" value="IntelliJ IDEA"/>
+        <attribute name="Manifest-Version" value="1.0"/>
+      </manifest>
+      <zipfileset dir="${module.etisalata-app.basedir}/web" prefix=""/>
+      <zipfileset dir="${module.etisalata-app.basedir}/out/production/etisalata-app" prefix="WEB-INF/classes"/>
+      <zipfileset file="${module.etisalata-app.basedir}/web/WEB-INF/web.xml" prefix="WEB-INF"/>
+    </jar>
+  </target>
+</project>

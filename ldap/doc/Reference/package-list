@@ -1,0 +1,7 @@
+com.netscape.sasl
+com.netscape.sasl.mechanisms
+netscape.ldap
+netscape.ldap.ber.stream
+netscape.ldap.controls
+netscape.ldap.factory
+netscape.ldap.util

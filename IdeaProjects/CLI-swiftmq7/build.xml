@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="QueueServer" default="compile" basedir=".">
+
+    <property name="src.dir" location="src"/>
+    <property name="build.dir" location="classes"/>
+    <property name="lib.dir" location="lib"/>
+    <property name="dist.dir" location="dist"/>
+
+    <path id="classpath">
+        <pathelement location="${lib.dir}/*.jar"/>
+    </path>
+
+    <fileset dir="${lib.dir}" id="lib">
+        <include name="**.jar"/>
+    </fileset>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="dist" depends="clean">
+        <antcall target="jar">
+        </antcall>
+    </target>
+
+    <target name="compile" depends="init"
+            description="compile the source" >
+        <javac srcdir="${src.dir}" destdir="${build.dir}">
+            <classpath>
+                <fileset refid="lib"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar jarfile="${dist.dir}/CliDst.jar" basedir="${build.dir}"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+</project>

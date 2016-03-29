@@ -1,0 +1,14 @@
+2009-12-24 15:41:02,171 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 15:42:56,265 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 15:50:20,421 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 15:50:31,125 [main] DEBUG Log4jPropertyFile - test debug
+2009-12-24 15:50:31,125 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 15:51:10,734 [main] DEBUG Log4jPropertyFile - test debug
+2009-12-24 15:51:10,734 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 15:51:10,734 [main] DEBUG RemoteCaller - setAmount
+2009-12-24 15:51:25,937 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 17:00:01,343 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 17:00:05,250 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 17:00:07,968 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-24 17:00:09,921 [main] INFO  Log4jPropertyFile - Test Log
+2009-12-29 11:51:10,718 [main] INFO  Log4jPropertyFile - Test Log

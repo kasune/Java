@@ -1,0 +1,6 @@
+mail.host=
+mail.user=
+mail.password=
+mail.tls=true
+mail.receiver=
+mail.sender=
